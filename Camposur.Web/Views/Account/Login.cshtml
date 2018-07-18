@@ -1,0 +1,77 @@
+﻿@using Camposur.Model.ViewModel
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<div class="container">
+    <div class="row div-margin-top">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <section id="loginForm">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @id = "LoginForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4>Log In</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="row div-margin-top">
+                        <div class="col-md-12 text-left">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row div-margin-top">
+                        <div class="col-md-12 text-left">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row div-margin-top">
+                        <div class="col-md-12 text-left">
+                            @Html.ActionLink("Olvidaste tu contraseña?", "ForgotPassword")
+                        </div>
+                    </div>
+                    <div class="row div-margin-top">
+                        <div class="col-md-12">
+                            <input type="submit" id="btn_login" value="Sign in" class="btn btn-default" />
+                        </div>
+                    </div>
+                    <div class="row div-margin-top">
+                        <div class="col-md-12">
+                            <hr />
+                            <span>No tienes una cuenta? </span> @Html.ActionLink("Crea una cuenta", "Register")
+                        </div>
+                    </div>
+                }
+            </section>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jqueryval")
+@section Scripts {
+    <script>
+        $("#LoginForm").on("submit", function () {
+            $("#btn_login").attr("disabled", true);
+            return true;
+        });
+    </script>
+}

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Registro Completado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h4>Registro completado!</h4>
+                    <hr />
+                </div>
+            </div>
+            <div class="row div-margin-top">
+                <div class="col-md-12">
+                    <p>Por favor, espera que un administrador habilite tu cuenta! Un email te sera enviado cuando eso suceda.</p>
+                </div>
+            </div>
+            <div class="row div-margin-top">
+                <div class="col-md-12 text-center">
+                    @Html.ActionLink("Ir al Login", "Login", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
