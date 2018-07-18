@@ -14,13 +14,17 @@ namespace Camposur.Model.DBModel
 
         public int AddressId { get; set; }
 
+        public int CustomerId { get; set; }
+
         public PaymentMethod PaymentMethod { get; set; }
 
         public OrderStatus Status { get; set; }
 
         public OrderAddress Address { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public Customer Customer { get; set; }
+
+        public ICollection<OrderItem> OrderItems { get; set; }
     }
 
 }

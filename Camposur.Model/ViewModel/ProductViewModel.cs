@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Camposur.Model.DBModel;
 
 namespace Camposur.Model.ViewModel
 {
     public class ProductViewModel
     {
+        public int? Id { get; set; }
+
+        public ProductViewModel(Product p)
+        {
+
+        }
     }
 }

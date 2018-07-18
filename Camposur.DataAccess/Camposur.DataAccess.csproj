@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -92,9 +92,9 @@
     <Compile Include="CamposurContext.cs" />
     <Compile Include="IdentityExtensions\GPSignInManager.cs" />
     <Compile Include="IdentityExtensions\GPUserManager.cs" />
-    <Compile Include="Migrations\201806302345182_Initial.cs" />
-    <Compile Include="Migrations\201806302345182_Initial.Designer.cs">
-      <DependentUpon>201806302345182_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201807182120128_Initial.cs" />
+    <Compile Include="Migrations\201807182120128_Initial.Designer.cs">
+      <DependentUpon>201807182120128_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,8 +120,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806302345182_Initial.resx">
-      <DependentUpon>201806302345182_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807182120128_Initial.resx">
+      <DependentUpon>201807182120128_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

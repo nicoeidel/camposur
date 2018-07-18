@@ -17,9 +17,11 @@ namespace Camposur.DataAccess
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> ProductTypes { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<OrderAddress> OrderAddresses { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Customer> Customer { get; set; }
 
         public override int SaveChanges()
         {

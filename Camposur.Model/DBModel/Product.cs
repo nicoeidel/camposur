@@ -1,4 +1,6 @@
-﻿namespace Camposur.Model.DBModel
+﻿using Camposur.Model.ViewModel;
+
+namespace Camposur.Model.DBModel
 {
     public class Product : BaseEntity
     {
@@ -10,8 +12,12 @@
 
         public byte[] Image { get; set; }
 
-        public int ProductTypeId { get; set; }
+        public int CategoryId { get; set; }
 
-        public ProductType ProductType { get; set; }
+        public Category Category { get; set; }
+
+        public Product(ProductViewModel productVM)
+        {
+        }
     }
 }
