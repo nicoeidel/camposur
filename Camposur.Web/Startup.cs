@@ -1,5 +1,7 @@
-﻿using Owin;
+﻿using Microsoft.Owin;
+using Owin;
 
+[assembly: OwinStartupAttribute(typeof(Camposur.Web.Startup))]
 namespace Camposur.Web
 {
     public partial class Startup
